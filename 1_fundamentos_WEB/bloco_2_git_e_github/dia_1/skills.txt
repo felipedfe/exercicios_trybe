@@ -1,3 +1,5 @@
 - JavaScript
 - Unix
 - HTML
+- CSS
+- Git
