@@ -1,5 +1,7 @@
 - JavaScript
 - Unix
 - HTML
+- Python
 - CSS
 - Git
+
