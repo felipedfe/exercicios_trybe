@@ -1,0 +1,15 @@
+.centraliza{
+    text-align: center;
+}
+
+li:hover{
+    background-color: grey;
+}
+
+li:active{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+ul {
+    list-style:none;
+}
