@@ -93,6 +93,17 @@
        texto = "Exercício 5.1 - JavaScript ";
        mudaTexto(texto);
 
+       //5
+
+       function mudaParaMaiusculo () {
+            let resgataP = document.getElementsByTagName("p");
+            for (let i = 0; i < resgataP.length; i += 1) {
+                resgataP[i].innerText = resgataP[i].innerText.toUpperCase();
+            }
+       }
+
+       mudaParaMaiusculo();
+
     </script>
   </body>
 </html>
