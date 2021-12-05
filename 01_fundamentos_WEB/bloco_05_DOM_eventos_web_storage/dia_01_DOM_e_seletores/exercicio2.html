@@ -78,7 +78,6 @@
        function mudaCorQuadradoCentro (color) {
             let resgataClasse = document.getElementsByClassName("center-content");
             resgataClasse[0].style.backgroundColor = color;
-            console.log(resgataClasse);
        }
     
        cor = "white";
@@ -103,6 +102,17 @@
        }
 
        mudaParaMaiusculo();
+
+       //6
+
+       function imprimeP () {
+            let resgataP = document.getElementsByTagName("p");
+            for (let i = 0; i < resgataP.length; i += 1) {
+                console.log(resgataP[i].innerText);
+            }
+       }
+
+       imprimeP();
 
     </script>
   </body>
