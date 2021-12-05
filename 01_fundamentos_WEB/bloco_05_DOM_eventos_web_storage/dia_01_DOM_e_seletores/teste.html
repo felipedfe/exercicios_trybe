@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p class="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p class="paragraph">Segundo parágrafo!</p>
+      <h5 class="titulo"> XXXXXXXX </h5>
+      <p class="titulo">UUUUUUU</p> 
+    </header>
+
+    <script>
+      let lista1 = document.getElementsByClassName("paragraph");
+      console.log(lista1);
+
+      let lista2 = document.querySelectorAll(".titulo");
+      console.log(lista2[0].innerText);
+      lista2[0].innerText = "TTTTTTTTT";
+      lista2[0].style.color = "red";
+
+      
+    </script>
+  </body>
+</html>
