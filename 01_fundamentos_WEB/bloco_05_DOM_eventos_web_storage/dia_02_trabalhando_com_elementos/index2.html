@@ -96,6 +96,34 @@
 
       //7
 
+      let imagem = document.createElement("img");
+      imagem.className = "small-image"
+      imagem.src = "https://picsum.photos/200";
+      sectionLeft.appendChild(imagem);
+      
+      //8
+
+      let lista = document.createElement("ul");
+
+      let numerosPorExtenso = [
+          "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"
+      ]
+
+      for (let i =0; i < numerosPorExtenso.length; i += 1) {
+        let numero = numerosPorExtenso[i];
+        let elementoLista = document.createElement("li");
+        elementoLista.innerText = numero;
+        lista.appendChild(elementoLista);
+      }
+      sectionRight.appendChild(lista);
+      
+      //9
+
+      for (let i = 0; i < 3; i += 1) {
+        let h3 = document.createElement("h3");
+        main.appendChild(h3);
+      }
+
       
 
     </script>
