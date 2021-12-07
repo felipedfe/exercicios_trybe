@@ -57,6 +57,8 @@
   </head>
   <body>
     <script>
+
+      //PARTE 1  
       //1
       let h1 = document.createElement("h1");
       let body = document.getElementsByTagName("body");
@@ -124,8 +126,37 @@
         main.appendChild(h3);
       }
 
-      
+      //PARTE 2
+      //1
 
+      h1.className = "title";
+
+      //2
+
+      let listaH3 = document.getElementsByTagName("h3");
+
+      for (let i = 0; i < listaH3.length; i += 1) {
+        listaH3[i].className = "description";
+      }
+
+      //3
+
+      main.removeChild(sectionLeft);
+
+      //4
+
+      sectionRight.style.marginRight = "auto";
+
+      //5
+
+      let paiDaSection = section.parentElement;
+      paiDaSection.style.backgroundColor = "green";
+
+      //6
+      
+      lista.lastChild.remove();
+      lista.lastChild.remove();
+      
     </script>
   </body>
 </html>
