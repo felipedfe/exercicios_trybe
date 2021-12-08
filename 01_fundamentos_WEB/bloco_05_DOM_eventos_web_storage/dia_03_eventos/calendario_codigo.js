@@ -42,10 +42,92 @@ function botaoFeriado (string) {
   return botao;
 }
 
-elementoBotaoFeriado = botaoFeriado("Feriado");
+let elementoBotaoFeriado = botaoFeriado("Feriado");
 
 let buttonsContainer = document.querySelector(".buttons-container");
 buttonsContainer.appendChild(elementoBotaoFeriado);
 
 //3
+elementoBotaoFeriado.addEventListener("click", mudaFundo);
+
+function mudaFundo () {
+  let feriados = document.getElementsByClassName("holiday");
+  
+  for (feriado of feriados) {
+    if (feriado.style.backgroundColor === "pink") {
+      feriado.style.backgroundColor = "rgb(238,238,238)";
+    } else {
+      feriado.style.backgroundColor = "pink";
+    }
+  }
+}
+
+//4
+
+function botaoSextaFeira (string) {
+  let botao = document.createElement("button");
+  botao.innerText = string;
+  botao.setAttribute("id", "btn-friday");
+  return botao;
+}
+
+let elementoBotaoSextaFeira = botaoSextaFeira("Sexta-feira");
+
+buttonsContainer.appendChild(elementoBotaoSextaFeira);
+
+//5
+elementoBotaoSextaFeira.addEventListener("click", mudaTexto);
+
+function mudaTexto () {
+  let diasClasseFriday = document.getElementsByClassName("friday");
+  let listaDiasSexta = ['4', '11', '18', '25'];
+
+  for (i = 0; i < diasClasseFriday.length; i += 1) {
+    if (diasClasseFriday[i].innerText === "Sexta-feira") {
+      diasClasseFriday[i].innerText = listaDiasSexta[i];
+    } else {
+      diasClasseFriday[i].innerText = "Sexta-feira";
+    }
+  }
+}
+
+//6
+let dias = document.getElementsByClassName("day")
+
+for (dia of dias) {
+  dia.addEventListener("mouseover", zoomIn);
+  dia.addEventListener("mouseout", zoomOut)
+}
+
+function zoomIn (evento) {
+  console.log(evento.target)
+  for (let i = 0; i < dezDaysList.length; i += 1) {
+    if (evento.target.innerText == dezDaysList[i]) {
+      evento.target.style.fontSize = "xx-large";
+    }
+  }
+}
+
+function zoomOut (evento) {
+  for (let i = 0; i < dezDaysList.length; i += 1) {
+    if (evento.target.innerText == dezDaysList[i]) {
+      evento.target.style.fontSize = "20px";
+    }
+  }
+}
+
+//7
+
+function criaTarefa (string) {
+  let myTasks = document.querySelector(".my-tasks");
+  let tarefa = document.createElement("span");
+  tarefa.innerText = string;
+  myTasks.appendChild(tarefa);
+}
+
+criaTarefa("natação");
+criaTarefa("estudar CSS")
+criaTarefa("almoçar")
+
+//8
 
