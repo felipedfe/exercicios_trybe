@@ -141,25 +141,31 @@ criaLegenda("green");
 
 //9 & 10
 
+//rgb(119, 119, 119) -> cinza (cor original)
+//rgb(0, 128, 0) -> verde
+
 let task = document.querySelector(".task");
 
 task.addEventListener("click", criaSelecao);
-dias[0].addEventListener("click", mudaCorDia);
+
+for (dia of dias) {
+  dia.addEventListener("click", mudaCorDia);      //adicionando o evento a todos os dias
+}
 
 function criaSelecao () {
   task.classList.toggle("selected");
 }
 
-//rgb(119, 119, 119) -> cinza (cor original)
-//rgb(0, 128, 0) -> verde
-
 function mudaCorDia (event) {
-  let corFonte = getComputedStyle(dias[0]).color;       //para pegar a cor dele no CSS
+  let corFonte = getComputedStyle(event.target).color;       //para pegar a cor dele no CSS
   console.log(corFonte);
   if (task.classList[1] === "selected" && corFonte === "rgb(119, 119, 119)") {
-    dias[0].style.color = "rgb(0, 128, 0)";
+    event.target.style.color = "rgb(0, 128, 0)";
   }
   else if (task.classList[1] === "selected" && corFonte === "rgb(0, 128, 0)") {
-    dias[0].style.color = "rgb(119, 119, 119)";
+    event.target.style.color = "rgb(119, 119, 119)";
   }
 }
+
+//BÔNUS
+
