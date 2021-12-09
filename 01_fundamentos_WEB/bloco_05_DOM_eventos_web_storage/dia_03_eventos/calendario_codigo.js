@@ -54,10 +54,10 @@ function mudaFundo () {
   let feriados = document.getElementsByClassName("holiday");
   
   for (feriado of feriados) {
-    if (feriado.style.backgroundColor === "pink") {
+    if (feriado.style.backgroundColor === "white") {
       feriado.style.backgroundColor = "rgb(238,238,238)";
     } else {
-      feriado.style.backgroundColor = "pink";
+      feriado.style.backgroundColor = "white";
     }
   }
 }
@@ -126,8 +126,40 @@ function criaTarefa (string) {
 }
 
 criaTarefa("natação");
-criaTarefa("estudar CSS")
-criaTarefa("almoçar")
 
 //8
 
+function criaLegenda (string) {
+  let myTasks = document.querySelector(".my-tasks");
+  let legenda = document.createElement("div");
+  legenda.className = "task";
+  legenda.style.backgroundColor = string;
+  myTasks.appendChild(legenda); 
+}
+
+criaLegenda("green");
+
+//9 & 10
+
+let task = document.querySelector(".task");
+
+task.addEventListener("click", criaSelecao);
+dias[0].addEventListener("click", mudaCorDia);
+
+function criaSelecao () {
+  task.classList.toggle("selected");
+}
+
+//rgb(119, 119, 119) -> cinza (cor original)
+//rgb(0, 128, 0) -> verde
+
+function mudaCorDia (event) {
+  let corFonte = getComputedStyle(dias[0]).color;       //para pegar a cor dele no CSS
+  console.log(corFonte);
+  if (task.classList[1] === "selected" && corFonte === "rgb(119, 119, 119)") {
+    dias[0].style.color = "rgb(0, 128, 0)";
+  }
+  else if (task.classList[1] === "selected" && corFonte === "rgb(0, 128, 0)") {
+    dias[0].style.color = "rgb(119, 119, 119)";
+  }
+}
