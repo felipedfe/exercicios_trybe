@@ -57,10 +57,27 @@ html {
   }
 
   h3 {
+      margin-top: 20px;
       margin-bottom: 7px;
   }
 
   .main-content p {
       font-size: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 7px;
+      padding: 8px;
+  }
+
+  @media screen and (min-width: 800px) {
+    header p {
+        font-size: 55px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        font-size: 20px;
+    }
+
+    
+
   }
