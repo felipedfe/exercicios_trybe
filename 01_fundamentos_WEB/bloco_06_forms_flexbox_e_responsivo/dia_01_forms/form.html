@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form action="" method="GET">
+    <fieldset>
+      <legend>Cadastro:</legend>
+      <br>
+      <label for="input-nome">Nome:</label>
+      <input type="text" name="nome" id="" maxlength="40" required>
+      <br><br>
+      <label for="input-email">E-mail:</label>
+      <input type="email" name="email" id="input-email" required>
+      <br><br>
+      <label for="input-cpf">CPF:</label>
+      <input type="text" name="cpf" id="input-cpf" maxlength="11" required>
+      <br><br>
+      <label for="input-endereco">Endereço:</label>
+      <input type="text" name="endereco" id="input-endereco" maxlength="200" required>
+      <br><br>
+      <label for="input-cidade">Cidade:</label>
+      <input type="text" name="cidade" id="input-cidade" maxlength="28" required>
+      <br><br>
+      <label for="select-estado">Estado:</label>
+      <select name="estado" id="select-estado" required></select>
+      <br><br>
+      <div id="container-residencia">
+        <input type="radio" name="residencia" id="casa" value="Casa">
+        <label for="casa">Casa</label>
+        <input type="radio" name="residencia" id="apartamento" value="Apartamento">
+        <label for="apartamento">Apartamento</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados do cargo:</legend>
+      <!-- CURRÍCULO -->
+      <label for="resumo-curriculo">Resumo do currículo:</label>
+      <textarea name="curriculo" id="resumo-curriculo" maxlength="1000" cols="30" rows="10" style="resize: none;" required></textarea>
+      <br><br>
+
+      <!-- CARGO -->
+      <label for="input-cargo">Cargo:</label>
+      <input type="text" id="input-cargo" maxlength="40" required>
+      <br><br>
+
+      <!-- DESCRIÇÃO DO CARGO -->
+      <label for="input-descricao-cargo">Descrição do cargo:</label>
+      <input type="text" id="input-descricao-cargo" maxlength="500" required>
+      <br><br>
+
+      <button type="submit" id="botao-enviar">Enviar</button>
+    </fieldset>
+    <div id="dados-validados"></div>
+  </form>
+
+</body>
+<script src="form_script.js"></script>
+
+</html>
+
+<!--  -->
+
+<form id="label-family">Qual sua família?
+  <div>
+    <input type="radio" name="family" id="frontend" value="Frontend">
+    <label for="frontend">Família Frontend</label>
+  </div>
+  <div>
+    <input type="radio" name="family" id="backend" value="Backend">
+    <label for="backend">Família Backend</label>
+  </div>
+  <div>
+    <input type="radio" name="family" id="fullstack" value="FullStack">
+    <label for="fullstack">Família Fullstack</label>
+  </div>
+</form>
