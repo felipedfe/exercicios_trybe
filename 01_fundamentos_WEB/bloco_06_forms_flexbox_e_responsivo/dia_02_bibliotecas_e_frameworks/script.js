@@ -7,6 +7,3 @@ console.log(data);
 console.log(document.getElementById("input-data"))
 
 console.log(data.getMaxDate());
-
-
-
