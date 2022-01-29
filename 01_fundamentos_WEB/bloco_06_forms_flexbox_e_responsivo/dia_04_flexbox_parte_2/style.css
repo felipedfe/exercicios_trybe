@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+ul {
+    display: flex;
+    list-style: none;
+    color: rgb(214, 214, 214);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    justify-content: space-around;
+}
+
+.header-container {
+    background-color: rgb(75, 81, 88);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+.menu-container {
+    flex-grow: 1;
+    flex-basis: 500px;
+    align-self: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    flex-basis: 268px;
+}
+
+/* MAIN */
+
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .movie-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 10;
+  }
+  
+  .movie-container h2 {
+    margin: 40px 0;
+    text-align: center;
+    flex-basis: 700px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card-container div {
+    align-items: center;
+    background-color: #5C687C;
+    border: black solid 1px;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    margin: 10px;
+    flex-basis: 16%;
+    flex-grow: 1;
+  }
+  
+  .aside-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    flex-basis: 350px;
+    flex-grow: 1;
+  }
+  
+  .aside-container h3, h4 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .aside-container p {
+    margin: 10px 0;
+    text-align: justify;
+  }
