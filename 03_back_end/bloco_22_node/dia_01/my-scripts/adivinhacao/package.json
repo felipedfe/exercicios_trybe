@@ -1,0 +1,15 @@
+{
+  "name": "adivinhacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sorteio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sorteio": "node sorteio.js"
+  },
+  "author": "Felipe Fernandes",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
