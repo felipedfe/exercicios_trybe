@@ -11,5 +11,3 @@ if (palpite === randomNum) {
 } else {
   console.log('errou...')
 };
-
-
